@@ -1,0 +1,323 @@
+﻿Ant Farm:
+
+Summery:
+========
+Creates and ant farm-esque system on your computer in the form of folders and text files based on carpenter ants or harvester ants
+The hills are Monogynous(one queen)
+
+The whole system operates on "ticks". Everytime the timer ticks, the ant moves or completes an action. a Tick happens every  x seconds.
+
+Generates an "Anthill" folder that contains "Ant" text files that move around the anthill creating new tunnels and rooms. 
+The ants can leave the hill and explore your computer looking for resources.
+The ants leave a hidden pherimone text file in folders they have visited. If one already exists, other passing ants follow it and increase its strength 
+If a food source has been depleted returning ants either dont increase strength or take away from strength, the trailer decays. 
+When the ant enters a folder, it checks every folder in that folder as well as the parent folder looking for pherimone trails to follow. 
+When ants reach a "Foodsource.txt" they decrease the amount of food stored on that file and increase the "Food carrying" Number on their own file. 
+When they reach the hill, they add that food to the FoodStash pile, or if one doesnt exist creates it 
+
+When a new anthill is created it is a base "AntHill" folder. The AntHill folder contains one queen. The Queen creates its first brood of x worker ants. 
+
+And ant queen can typically lay thousands of eggs PER DAY. For the sake of this simulation the queen will lay a much smaller amount of eggs per x amount of "ticks"
+
+
+Ant File Name:
+==============
+
+Caste_00_0000_State.ant
+
+first letter of the ID indicates colony, second is colony number, then unique ant number, then current state. 
+
+ex.
+
+Worker_00_0000_State.ant
+
+OR
+
+Queen_00_0000_State.ant
+
+
+Egg_
+Larvae_
+Pupae_
+
+
+Other possible files:
+======================
+
+
+
+FoodSource : Amount
+FoodStash : Amount MAX 1000
+Pheremone Trail(hidden)(Multiple fields)
+	-Food Found : strength 
+	-Danger : strength 
+	-alarm : strength
+	
+	
+	
+Folders:
+========
+
+-AntHill
+-Tunnel_A0000
+-ChamberName_A0000
+
+Chamber Types
+==============
+-Nursery
+-FoodStash
+-ThroneRoom
+
+
+	
+
+Possible other features:
+========================
+"drone" ant production (Egg unfertilized)
+"Princess" ant production (given more food)
+"Soldier" ants (given medium food)
+
+
+"Nuptual Flight" drone and princess ants meeting to create a new queen. 
+
+
+
+
+Notes:
+
+- Tunnels and Chambers 
+- Movement of eggs to safe places and away from danger
+- Queen pheremone signals
+- soldier patroling
+- placing young WITH the food
+- waste dumps?
+- queens buried in food stashes?
+- workers know how the hill is doing and produces workers, soldiers, and drones accordingly 
+- different sizes of ants for how much it was fed as a larvae 
+- strength of pheremone trail dictates direction 
+- chirp calls ants up to a certain distance. 
+- chirp or pheremone for an ant being trapped. 
+- nest finding
+- soldiers visit the queen chamber often
+- Calculating short routes
+
+- ants "count" their steps to judge distance. 
+
+
+
+
+
+Ant pheremone probability: http://www.drdobbs.com/parallel/ant-colony-algorithms/191800178?pgno=3
+Leaf cutter ants(Smarter every day): https://www.youtube.com/watch?v=-ZZzcw9ifDQ
+Leaf cutter ant documentary: https://www.youtube.com/watch?v=8n0SkIGARuo
+
+
+
+pheremone mechanics
+===================
+
+
+
+-Ant finds food. Sets food pheremone to max and works its way back. setting each pheremone to its max on the way back.
+-pheremones do no get set on the way to food, just on the way back if food is found. 
+-if has food, follow to nest, if not, follow to food. 
+- if wrong trail is followed, eventually the ant will reach a dead end and go back the other way, picking a new trail
+- ants may get stuck sometimes but they will eventually get swept up in the main trail. 
+
+              
+
+What I need to Learn:
+=====================
+-Creating folders with code 
+//System.IO.Directory.CreateDirectory(pathString);
+
+-Creating text files with code
+/*string path = @"c:\temp\MyTest.txt";
+        if (!File.Exists(path)) 
+        {
+            // Create a file to write to. 
+            using (StreamWriter sw = File.CreateText(path)) 
+            {
+                sw.WriteLine("Hello");
+                sw.WriteLine("And");
+                sw.WriteLine("Welcome");
+            }	
+        }
+*/
+
+
+-Creating hidden files and folders
+http://stackoverflow.com/questions/2246990/how-do-i-write-to-a-hidden-file
+
+-detecting parent and sub folders //http://msdn.microsoft.com/en-us/library/system.io.directory.getdirectories%28v=vs.110%29.aspx
+
+-detecting files in parent and sub folders 
+
+-moving files with code// file.move(currentLocation, destination) //http://msdn.microsoft.com/en-us/library/system.io.file.move%28v=vs.110%29.aspx //http://msdn.microsoft.com/en-us/library/cc148994.aspx
+
+-changing file icons with code. 
+
+-timer
+
+
+
+Classes:
+========
+
+Ant:
+
+Fields
+-------
+-Health
+-Hunger
+-Enum Size
+-Carrying Amount
+-Enum Carrying Type
+-ID
+
+
+
+Methods
+--------
+-PickUpFood
+-SetPheremone
+-Move
+-Chirp
+
+
+
+
+Worker Ant from Ant:
+
+Fields
+------
+Enum Action State
+
+Method
+------
+
+-DigTunnel
+-CreateChamber
+
+
+
+Queen Ant from Ant:
+
+Fields
+------
+Pheremone State
+Ticks until birth
+being carried
+
+Method
+------
+LayEggs
+override SetPheremone
+override move
+
+
+
+Chamber Classes and their features
+==================================
+-Nursery
+	-More offspring then food stores ratio
+	-deep into then nest for safe keeping
+-FoodStash
+	-purely food stashes
+	-can be a variety of depths
+-throne room
+	-queen with multiple food stashes
+	-must be deep into the nest
+	
+Tunneling
+=========
+When an ant is digging, it must look at certain information to choose where to build
+the ant needs to know:
+	-how far from the entraince the chamber is
+	-what chamber is needed(flags from other ants?)
+	
+Every chamber must be at least 2 tunnel folders apart.
+
+Digging algorithem:
+-Check flag
+-set task
+-check current folder
+-dig 2 tunnels 
+-dig chamber, instatiate appropriate chamber class
+-once completed check for new flag
+-if none, choose new task
+
+	
+Flags
+=====
+When an ant who is completing a certain task notices that a chamber is full of the max amount of a resource
+it sends a flag to the anthill. Digging ants check those flags and decides to build a chamber based on whats needed.
+
+Example:
+An ant notices that a foodstore is full and checks to see if there are other ones. 
+If not, it sends a flag/work-order to the anthill for a digging ant to pick up 
+That digging ant checks the flags for what is needed and builds that chamber in the nest. 
+
+
+Step Counting
+===============
+This will be used to prevent ants from going to far when the number of ants in the colony is small.
+
+1. A variable that exists publicly in the anthill class
+
+-the ant leaves the nest.
+-every jump after leaving the nest incriments the step counter
+-if the ant reaches or exceeds the limit set in the anthill class the ant will move to its previous location as if it had hit a dead end.  
+-the step counter variable could be calculated when the AntsTotal is set, and at the start of the anthill(constructor)
+
+
+
+Game Modes:
+===========
+-modes: Interactive, and Simulation
+-Interactive allows for direct interaction with the ant farm. The colonys will require your assistance to succeed
+-Simulation just runs the program with the basic tools, you can place food at no cost and your ants will just go about their business
+
+
+Interactive Ideas
+=================
+- Progress Points: Depending on the size of your colony, you can spend these points on buffs, traps, food and other aids 
+- Traps: These are used to keep preditory bugs at bay. 
+- Disease curing: The ants can get diseases, you have to develop a cure before the colony is decimated. 
+- Rival Colonies: Othe colonies may appear and could be competition for food and may even attack your ants. It also may be worthwhile to attack them for resources
+
+Buffs
+=====
+- Buffs and Diseases work the same way, where there is a patient zero and it spreads througout the colony.
+- you choose what gets buffed by spending progress points. 
+- only two different buff types per buff (Health and hunger, Strength and health etc) and its split percentage
+
+
+
+
+Save Files:
+===========
+
+Enviroment
+(if this is empty there is no enviroment)
+EndEnviroment
+
+Anthills
+EndAnthills
+
+Ants
+EndAnts
+
+Pheromones
+EndPheromones
+
+Food
+EndFood
+
+FoodStashes
+EndFoodStashes
+
+etc
+
+
+

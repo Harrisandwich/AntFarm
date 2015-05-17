@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AntFarm.Ant" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAQgqiEEUIIwwiACIYAgIgAiAURDUAoIyIgAJCpSAMg=</HashCode>
+      <FileName>Ant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.AntFarmForm" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JRgmADEZWiOYlBAhSTCzgEBC6CgCQlsxgnTTYORYAFU=</HashCode>
+      <FileName>AntFarmForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.AntHill" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQIAAOQEACQAgAACABAAAAAjAAIUQoQAIAAAAgAEEAI=</HashCode>
+      <FileName>AntHill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Egg" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAiAAEIAgAAAAIAAAAAAAAAAAAEIAAAAAAAAAAEA=</HashCode>
+      <FileName>Egg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Larvae" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAiAAEIAgAAAAIAAAAAQAAAAAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Larvae.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Nursery" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Nursery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Pheromone" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAABAEAAgAgAAAAAAAAAACAEADAAAAQAAAAAgAAgA=</HashCode>
+      <FileName>Pheromone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Program" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Pupae" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAiAAEIAgAAAAMAAAAAQAAABAAAIAAAAAAAAAAEA=</HashCode>
+      <FileName>Pupae.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Queen" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACjEAEIIgAgAAIBAAIABAAAAAAAIAAgAAAAEAAEA=</HashCode>
+      <FileName>Queen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AntFarm.Worker" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAjAAEcIgAgEAIEAAIAAAAAAAgQJiAGBAAAmAAMA=</HashCode>
+      <FileName>Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="AntFarm.Chamber" Collapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEBAAAhAAAAAAAAhBCAAABQAAIAAAAAAAAAgA=</HashCode>
+      <FileName>Chamber.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="AntFarm.AntType" Collapsed="true">
+    <Position X="12" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAARAAAAAAAAAAAAQAAAAIAgAIAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>AntType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.Carrying" Collapsed="true">
+    <Position X="13.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAQAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Carrying.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.ChamberType" Collapsed="true">
+    <Position X="15.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAEAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChamberType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.Chirp" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAAAgAAAAE=</HashCode>
+      <FileName>Chirp.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.PheromoneEnum" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAACAAEAAIAAAAJAAAAAAIAIAAgkAAAAA=</HashCode>
+      <FileName>Pheremone.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.Size" Collapsed="true">
+    <Position X="15.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAABAEAAA=</HashCode>
+      <FileName>Size.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.State" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAGAAQAAAAAAkQIAAAAABAAAAAAAAAAFGAACAA=</HashCode>
+      <FileName>State.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AntFarm.FormState" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>FormState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,56 @@
+﻿
+
+Road Map:
+==============================================================================================================================
+START OF PHASE 1
+-allow command to start ant hill.*Completed*
+-Create Anthill folder*Completed*
+-Create queen*Completed*
+-allow queen to lay eggs*Completed*
+-allow eggs to grow into workers*Completed*
+-allow ant to move from folder to folder *Completed*
+-allow ants follow pheromones *Completed*
+-allow ants to gather food *Completed*
+-allow ants to stash food *Completed*
+-allow ants to expand nest *Completed*
+-allow for command to clear anthills and show information on an ant or anthill *Completed*
+-PHASE 1 TESTING AND BUG FIXES *Completed*
+END OF PHASE 1
+
+START OF PHASE 2
+-allow ants to tend to the queen *Completed*
+-allow egg movers to move eggs the queen lays to nurseries *Completed* 
+-allow ants to tend to the offspring *Completed*
+-allow ants to feed eachother *Completed*
+-Saving and loading scenarios *Completed*
+-Make it impossible to place an ant hill without an enviroment(alpha feature) *Completed*
+-allow ants to flag the job list *completed*
+-Food generator*completed*
+-fix a lot of in nest logic
+-PHASE 2 TESTING AND BUG FIXES 
+END OF PHASE 2
+
+START OF PHASE 3
+-allow ants to feed themselves and include logic based on hunger levels
+-allow ants to suffer from starvation and age 
+-Create a visualizor. Perhap you select a folder from the location selector and it builds the visualizor based on that root)
+-Folder Tree Selector and Entity Selector. (May be Hidden in alpha, or included but as a feature that doesnt really do much)
+
+END OF PHASE 3 
+
+ALPHA TESTING AND BUG FIXES. ALSO CLEAN UP UI AND CREATE SOME FORM OF TUTORIAL
+ALPHA CLEAN UP
+-Create failsafes for when the user deletes the anthill(revert to initial, clean up all ants and pheremones), eviroment(revert to initial), or ant(replace ant) 
+
+ALPHA CLEAN UP END
+
+
+
+
+
+
+
+Misc Features:
+-Make it so ants place pheromones with a stronger strength depending on the size of the nest
+	This might not be needed as i have yet to test with more ants. More ants may solve any pheromone issues. 
+End of misc features

@@ -1,0 +1,40 @@
+﻿
+Current Bugs and Issues:
+==============================================================================================================================
+
+Tier 0 (Most Important):
+=======================
+-(phase 3)TendingToEggs ants stop tending for some reason. 
+-(phase 3) Not all ants are saving/loading
+	
+
+Tier 1:
+=======================
+ -(Phase 2)Gathering ants are getting stuck in the Nursery rather then leaving in search of a food stash 
+  Issue with the Move() function. A destination is not getting retreived and an exception is getting thrown.
+  Probably a problem with stepping. 
+-(phase 2)There are some big issues with GetRandomPath(). Its not returning a path
+-(phase 2) in nest ants are still leaving the nest
+-(Phase 2)TendingtoEgg ants try to feed larvae but choke if there is no food source. This can be easily fixed by having them do the same thing 
+that the TendingtoQueen ants do and go find food once they notice there is none. 
+
+
+Tier 2:
+=======================
+
+Tier 3:
+=======================
+Tier 4 (Least Important):
+=======================
+
+Possibly Fixed Purgatory:
+=========================
+-(Phase 3) Moving egg ants dont know that they are carrying an egg. wont drop off at nursery *Can't Repro*
+
+
+
+-(Phase 2) ants are leaving the nest in search of a new throne room for the queen
+-(Phase 2) the digging ant did not build a new throne room in the nest, but rather outside. 
+//Both of the above bugs could be fixed in similar ways. Maybe pass a parameter to movment functions that exclude a specified path from the list.
+-(Phase 2)get moving egg ants moving eggs. (The eggs seem to have "Being Carried" set to true but they arn't moving. This causes the movingEgg ants to check the same ant over and over again.)
+FIX: First, find out why the eggs think they are being carried. Second, create a while loop or perhaps an overloaded function in order to find an ant that isnt being carried. 
