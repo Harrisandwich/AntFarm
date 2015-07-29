@@ -1,5 +1,5 @@
 # AntFarm
-Ant Farm Simulator for the Windows OS GUI
+Ant Farm Simulator for the Windows OS GUI (C#)
 
 Summery:
 =====================
