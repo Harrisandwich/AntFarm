@@ -9,12 +9,8 @@ It started as an experiment born from laziness. I was new to game development an
 enviroments and graphics libraries. From that fear came the idea to make a game that entirely utilizes what the Windows 
 OS has to offer. Funny enough that isn't a whole lot, but it came as an exciting challenge. 
 
+Ants exist as text files that explore directories in search of food. As they search they leave pheromones to lead them back to the nest. When food is found they take it back to the nest, leaving 'food' pheromones in their wake to lead other ants to it. 
+
+There are a few other features as well, many unfinished, but the food searching mechanic is the main functioning part of this application
+
 Good luck to anyone looking to dive in and play with this! 
-
-
-Video Demonstrations:
-=========================
-
-The playlist: https://www.youtube.com/playlist?list=PLV1iRUV7ubhIY-jfYSsn6dtqk0ZVC_UcT
-
-Video one: https://www.youtube.com/watch?v=OpbNhihpQmM&index=1&list=PLV1iRUV7ubhIY-jfYSsn6dtqk0ZVC_UcT
